@@ -149,6 +149,23 @@ classDiagram
     1. delete birthDate;
     1. delete gradDate;
 1. void init(string studentString)
+    1. put studentString into stringstream
+    1. put first value into firstName
+    1. put second value into lastName
+    1. initialize studentAddress and pass next four values in as parameters
+    1. initialize birthDate and pass next value in as a parameter
+    1. initialize gradDate and pass next value in as a parameter
+    1. put remaining value into creditHours
 1. void printStudent()
+    1. print firstName and lastName
+    1. print studentAddress
+    1. print "DOB:" and birthDate
+    1. print "grad: " and gradDate
+    1. print "credits: " and creditHours
+    1. print "_ " 36 times to act as a divider
 1. string getLastFirst()
+    1. pass lastName into stringstream
+    1. pass ", " into stringstream
+    1. pass firstName into stringstream
+    1. return the stringstream as a string
 
