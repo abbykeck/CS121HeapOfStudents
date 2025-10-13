@@ -34,5 +34,6 @@ void testStudent(){
   student->printStudent();
   std::cout << std::endl;
   std::cout << student->getLastFirst() << std::endl;
+  std::cout << "Credits: " << student->getCredits() << std::endl;
   delete student;
 } // end testStudent
