@@ -67,3 +67,7 @@ std::string Student::getLastFirst() {
 	ss << Student::lastName << ", " << Student::firstName;
 	return ss.str();
 } // end getLastFirst
+
+int Student::getCredits() {
+	return Student::creditHours;
+} // end getCredits

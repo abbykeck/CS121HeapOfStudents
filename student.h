@@ -18,6 +18,7 @@ class Student {
 		void init(std::string studentString);
 		void printStudent();
 		std::string getLastFirst();
+		int getCredits();
 }; // end class def
 
 #endif
