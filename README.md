@@ -39,6 +39,47 @@ classDiagram
     Student o-- Address
     Student o-- Date
 ```
+## Algorithm for main
+### Algorithm for loadStudents
+0. parameter: students vector
+1. create filestream inFile for students.csv
+1. string currentLine;
+1. open inFile
+1. bool keepGoing = true;
+1. while(keepGoing)
+    1. if (inFile.eof())
+        1. keepGoing = false;
+    1. else
+        1. getLine(inFile, currentLine)
+        1. Student student = new Student();
+        1. student.init(currentLine);
+        1. append student to vector
+    1. end if
+1. end while
+1. close inFile
+### Algorithm for printStudents
+0. parameter: students vector
+1. for every student in students (using vector iterator, students.begin() and students.end())
+    1. student.printStudent();
+    1. print a new line
+1. end for
+### Algorithm for showStudentNames
+0. parameter: students vector
+1. for every student in students
+    1. print student.getLastFirst() + student.getCredits() + new line
+1. end for
+### Algorithm for findStudent
+0. parameter: students vector
+1. string search = "";
+1. print "last name of student: "
+1. put user input into search
+1. for every student in students
+    1. int match = 0
+    1. match = std::student.getLast().find(search)
+    1. if (match != -1)
+        1. student.printStudent();
+    1. end if
+1. end for
 ## Algorithm for Address
 ### Header
 1. protected:
@@ -136,6 +177,7 @@ classDiagram
     1. void init(string studentString)
     1. void printStudent();
     1. string getLastFirst();
+    1. int getCredits();
 ### Implementation
 1. Student constructor
     1. studentAddress = new Address();
@@ -168,4 +210,6 @@ classDiagram
     1. pass ", " into stringstream
     1. pass firstName into stringstream
     1. return the stringstream as a string
+1. int getCredits()
+    1. return creditHours;
 
