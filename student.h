@@ -17,6 +17,7 @@ class Student {
 		~Student();
 		void init(std::string studentString);
 		void printStudent();
+		std::string getLast();
 		std::string getLastFirst();
 		int getCredits();
 }; // end class def

@@ -62,6 +62,10 @@ void Student::printStudent() {
 	std::cout << std::endl;
 } // end printStudent
 
+std::string Student::getLast() {
+	return Student::lastName;
+} // end getLast
+
 std::string Student::getLastFirst() {
 	std::stringstream ss;
 	ss << Student::lastName << ", " << Student::firstName;
