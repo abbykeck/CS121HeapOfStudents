@@ -41,7 +41,7 @@ classDiagram
 ```
 ## Algorithm for main
 ### Algorithm for loadStudents
-0. parameter: students vector
+0. parameter: students vector (reference)
 1. create filestream inFile for students.csv
 1. string currentLine;
 1. open inFile
@@ -58,18 +58,18 @@ classDiagram
 1. end while
 1. close inFile
 ### Algorithm for printStudents
-0. parameter: students vector
+0. parameter: students vector (reference)
 1. for every student in students (using vector iterator, students.begin() and students.end())
     1. student.printStudent();
     1. print a new line
 1. end for
 ### Algorithm for showStudentNames
-0. parameter: students vector
+0. parameter: students vector (reference)
 1. for every student in students
     1. print student.getLastFirst() + student.getCredits() + new line
 1. end for
 ### Algorithm for findStudent
-0. parameter: students vector
+0. parameter: students vector (reference)
 1. string search = "";
 1. print "last name of student: "
 1. put user input into search
@@ -80,6 +80,36 @@ classDiagram
         1. student.printStudent();
     1. end if
 1. end for
+### Algorithm for delStudents
+0. parameter: students vector (reference)
+1. for every student in students
+    1. delete student
+1. end for
+### Algorithm for menu
+1. create students vector
+1. loadStudents(students);
+1. int choice = -1;
+1. bool keepGoing = true;
+1. while (keepGoing)
+    1. print "0) quit" + new line
+    1. print "1) print all student names" + new line
+    1. print "2) print all student data" + new line
+    1. print "3) find a student" + new line + new line
+    1. print "please choose 1-3:"
+    1. put user input into choice
+    1. if (choice == 0)
+        1. keepGoing = false;
+    1. else if (choice == 1)
+        1. showStudentNames(students);
+    1. else if (choice == 2)
+        1. printStudents(students);
+    1. else if (choice == 3)
+        1. findStudent(students);
+    1. else
+        1. print "invalid input, please try again"
+    1. end if
+1. end while
+1. delStudents(students);
 ## Algorithm for Address
 ### Header
 1. protected:
