@@ -88,7 +88,7 @@ classDiagram
 ### Algorithm for menu
 1. create students vector
 1. loadStudents(students);
-1. int choice = -1;
+1. string choice = "";
 1. bool keepGoing = true;
 1. while (keepGoing)
     1. print "0) quit" + new line
@@ -97,13 +97,13 @@ classDiagram
     1. print "3) find a student" + new line + new line
     1. print "please choose 1-3:"
     1. put user input into choice
-    1. if (choice == 0)
+    1. if (choice == "0")
         1. keepGoing = false;
-    1. else if (choice == 1)
+    1. else if (choice == "1")
         1. showStudentNames(students);
-    1. else if (choice == 2)
+    1. else if (choice == "2")
         1. printStudents(students);
-    1. else if (choice == 3)
+    1. else if (choice == "3")
         1. findStudent(students);
     1. else
         1. print "invalid input, please try again"
